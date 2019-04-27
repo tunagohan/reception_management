@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/reception', to: 'receptions#index'
+  root to: 'receptions#index'
 end

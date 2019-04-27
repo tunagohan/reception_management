@@ -23,8 +23,6 @@ services:
       dockerfile: ./docker/ruby/Dockerfile
     environment:
       RAILS_ENV: development
-    env_file:
-      - docker/ruby/docker-env
     volumes:
       - .:/app
     depends_on:

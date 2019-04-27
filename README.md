@@ -45,6 +45,7 @@ $ docker-compose run --rm db mysql -uroot -proot_password -e "FLUSH PRIVILEGES;"
 $ docker-compose build
 $ docker-compose up -d
 $ docker-compose run app rails db:create
+$ docker-compose run --rm app bundle install --path vendor/bundle
 ```
 
 ### アクセス
