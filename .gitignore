@@ -30,3 +30,5 @@
 docker/ruby/docker-env
 
 .idea
+
+vendor/bundle
