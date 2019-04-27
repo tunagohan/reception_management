@@ -25,6 +25,7 @@ services:
       RAILS_ENV: development
     volumes:
       - .:/app
+      - bundle:/bundle
     depends_on:
       - db
     stdin_open: true
@@ -35,3 +36,5 @@ services:
 
 volumes:
   data-store:
+  bundle:
+    driver: local

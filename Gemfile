@@ -17,7 +17,6 @@ gem 'bootsnap', '~> 1.4', '>= 1.4.4'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
-gem 'bootstrap', '~> 4.1.1'
 
 group :development do
   gem 'web-console', '~> 3.7'
