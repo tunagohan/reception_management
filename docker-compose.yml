@@ -1,0 +1,39 @@
+version: '3'
+services:
+  # MySQL
+  db:
+    container_name: reception_db
+    build:
+      context: .
+      dockerfile: ./docker/mysql/Dockerfile
+    volumes:
+      - data-store:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_password}
+      MYSQL_USER: ${MYSQL_USER:-reception_user}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-reception_password}
+    ports:
+      - "${DB_PORT:-3306}:3306"
+
+  # Rails
+  app:
+    container_name: reception_app
+    build:
+      context: .
+      dockerfile: ./docker/ruby/Dockerfile
+    environment:
+      RAILS_ENV: development
+    env_file:
+      - docker/ruby/docker-env
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+
+volumes:
+  data-store:
