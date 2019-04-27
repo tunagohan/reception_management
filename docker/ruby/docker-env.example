@@ -1,3 +1,0 @@
-DB_PORT=3307
-APP_DATABASE_USERNAME=reception_user
-APP_DATABASE_PASSWORD=reception_password
