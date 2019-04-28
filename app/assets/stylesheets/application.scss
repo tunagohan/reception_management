@@ -2,13 +2,21 @@
 @import "bootstrap";
 
 body {
-  background-color: lightskyblue;
+
 }
 
-.header {
+header {
   background-color: lightskyblue;
-  height: 80px;
   text-align: justify;
+  padding: 15px;
+}
+
+.padding20 {
+  padding: 20px;
+}
+
+.container {
+  padding: 80px;
 }
 
 .btn-circle-stitch {

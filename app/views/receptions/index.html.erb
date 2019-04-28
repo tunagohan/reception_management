@@ -1,16 +1,35 @@
-<div class="container">
-  <div class="header">
-    <h1> ◯◯ 会社 受付システム</h1>
-  </div>
-  <form>
-    <div class="form-group">
-      <label>名前</label>
-      <input type="text" name="name" class="form-control">
+<header class="bg-primary">〇〇株式会社 受付システム</header>
+
+<section class="container">
+
+  <!-- form -->
+  <form class="form-horizontal">
+    <div class="form-group form-group-lg">
+      <label for="lgFormGroupInput" class="col-sm-2 control-label">お名前</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="lgFormGroupInput" placeholder="〇〇 太郎">
+      </div>
     </div>
-    <div class="form-group">
-      <label>会社名</label>
-      <input type="text" name="company" class="form-control">
+
+    <div class="form-group form-group-lg">
+      <label for="lgFormGroupInput" class="col-sm-2 control-label">会社名</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="lgFormGroupInput" placeholder="株式会社〇〇">
+      </div>
     </div>
-    <button type="submit" class="btn-circle-stitch">送信</button>
+
+    <div class="center-block">
+      <div class="">
+        <button type="submit" class="btn-circle-stitch">
+          確認画面へ進む
+        </button>
+      </div>
+    </div>
   </form>
-</div>
+  <!-- /form -->
+
+</section>
+
+<footer class="text-center">
+  Copyright ©2019<a href="" target="_blank">kazutomo waragai</a>
+</footer>
